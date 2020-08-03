@@ -159,23 +159,31 @@
 
 //Coding Challenge 2
 
-let johnsTeamAverage = (180 + 120 + 103) / 3;
-let mikesTeamAverage = (216 + 94 + 123) / 3;
-let marysTeamAverage = (150 + 134 + 105) / 3;
+// let johnsTeamAverage = (180 + 120 + 103) / 3;
+// let mikesTeamAverage = (216 + 94 + 123) / 3;
+// let marysTeamAverage = (150 + 134 + 105) / 3;
+//
+// console.log("John's team average: " + johnsTeamAverage);
+// console.log("Mike's team average: " + mikesTeamAverage);
+// console.log("Mary's team average: " + marysTeamAverage);
+//
+// if (mikesTeamAverage === johnsTeamAverage && johnsTeamAverage === marysTeamAverage) {
+//     console.log("There was a tie!")
+// } else if (mikesTeamAverage > johnsTeamAverage && marysTeamAverage < mikesTeamAverage) {
+//     console.log("Mike won! Mike's team average is " + mikesTeamAverage + ", and John's team average is " + johnsTeamAverage + ", and Mary's score is " + marysTeamAverage);
+// } else if (johnsTeamAverage > mikesTeamAverage && johnsTeamAverage > marysTeamAverage) {
+//     console.log("John won! John's team average is " + johnsTeamAverage + ", and Mike's team average is " + mikesTeamAverage + ", and Mary's score is " + marysTeamAverage);
+// } else {
+//     console.log("Mary won! Mary's team average is " + marysTeamAverage + ", and John's team average is " + johnsTeamAverage + ", and Mike's team average is " + mikesTeamAverage);
+// }
 
-console.log("John's team average: " + johnsTeamAverage);
-console.log("Mike's team average: " + mikesTeamAverage);
-console.log("Mary's team average: " + marysTeamAverage);
-
-if (mikesTeamAverage === johnsTeamAverage && johnsTeamAverage === marysTeamAverage) {
-    console.log("There was a tie!")
-} else if (mikesTeamAverage > johnsTeamAverage && marysTeamAverage < mikesTeamAverage) {
-    console.log("Mike won! Mike's team average is " + mikesTeamAverage + ", and John's team average is " + johnsTeamAverage + ", and Mary's score is " + marysTeamAverage);
-} else if (johnsTeamAverage > mikesTeamAverage && johnsTeamAverage > marysTeamAverage) {
-    console.log("John won! John's team average is " + johnsTeamAverage + ", and Mike's team average is " + mikesTeamAverage + ", and Mary's score is " + marysTeamAverage);
-} else {
-    console.log("Mary won! Mary's team average is " + marysTeamAverage + ", and John's team average is " + johnsTeamAverage + ", and Mike's team average is " + mikesTeamAverage);
+function calculateAge(currentYear, birthYear) {
+    return currentYear - birthYear;
 }
+
+let age = calculateAge(2020, 1988);
+console.log(age);
+
 
 
 
