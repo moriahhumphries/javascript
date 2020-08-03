@@ -45,19 +45,38 @@
 
 //Operator Precedence
 
-let now = 2020;
-let yearMoriah = 1988;
-let fullAge = 18;
+// let now = 2020;
+// let yearMoriah = 1988;
+// let fullAge = 18;
+//
+// var isFullAge = (now - yearMoriah) >= fullAge;
+//
+// console.log(isFullAge)
+//
+// let ageAndrew = 35;
+// let ageMoriah = 32;
+// let averageAge = (ageAndrew + ageMoriah) / 2;
+//
+// console.log(averageAge);
 
-var isFullAge = (now - yearMoriah) >= fullAge;
+// Coding challenge BMI
 
-console.log(isFullAge)
+let markMass = 78 //84;
+let johnMass = 92 //88;
 
-let ageAndrew = 35;
-let ageMoriah = 32;
-let averageAge = (ageAndrew + ageMoriah) / 2;
+let markHeight = 1.69 //1.82;
+let johnHeight = 1.95 //1.88;
 
-console.log(averageAge);
+let markBMI = markMass / (markHeight * markHeight);
+let johnBMI = johnMass / (johnHeight * johnHeight);
+
+let higherBMI = markBMI >= johnBMI;
+console.log("Mark's BMI is: " + markBMI + ", and John's BMI is " + johnBMI +". Is Mark's BMI higher than John's? " + higherBMI);
+
+
+
+
+
 
 
 
