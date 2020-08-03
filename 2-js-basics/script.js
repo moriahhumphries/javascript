@@ -110,17 +110,53 @@
 
 // Boolean Logic
 
-let firstName = "Kerrigan";
-let age = 9;
+// let firstName = "Kerrigan";
+// let age = 9;
+//
+// if (age < 3) {
+//     console.log(firstName + " is a tiny baby!");
+// } else if (age >= 4 && age<=8) {
+//     console.log(firstName + " is an adult cat!");
+// } else {
+//     console.log(firstName + " is a Senior Baby!");
+//
+// }
 
-if (age < 3) {
-    console.log(firstName + " is a tiny baby!");
-} else if (age >= 4 && age<=8) {
-    console.log(firstName + " is an adult cat!");
-} else {
-    console.log(firstName + " is a Senior Baby!");
+// Ternary and Switch Statements
 
+let firstName = "Iggy";
+// let age = 16;
+//
+// age >= 18 ? console.log(firstName + " is " + age + " and drinks beer.") : console.log(firstName + " is " + age + " and drinks juice.")
+
+let job = "Cat";
+
+switch (job) {
+    case "Developer":
+        console.log(firstName + " makes software");
+        break;
+    case "Cat":
+        console.log(firstName + " stays at home and is a Cat");
+        break;
+    case "Dog":
+        console.log(firstName + " would never be a Dog!");
+        break;
+    default:
+        console.log(firstName + " does something else");
 }
+
+let iggyAge = 4;
+switch (true) {
+    case iggyAge < 3:
+        console.log(firstName + " is a tiny baby!");
+        break;
+    case iggyAge >= 4 && iggyAge<=8:
+        console.log(firstName + " is an adult cat!")
+        break;
+    default:
+        console.log(firstName + " is a Senior Baby!");
+}
+
 
 
 
