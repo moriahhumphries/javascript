@@ -75,38 +75,52 @@
 
 // If/else statements
 
-let firstName = "Moriah";
-let maritalStatus = "Married";
+// let firstName = "Moriah";
+// let maritalStatus = "Married";
+//
+// if (maritalStatus === "married") {
+//     console.log(firstName + " is married!");
+// } else {
+//     console.log(firstName + " is single!");
+// }
+//
+// let isMarried = true;
+//
+// if (isMarried) {
+//     console.log(firstName + " is married!");
+// } else {
+//     console.log(firstName + " is single!");
+// }
+//
+// let markMass = 78 //84;
+// let johnMass = 92 //88;
+//
+// let markHeight = 1.69 //1.82;
+// let johnHeight = 1.95 //1.88;
+//
+// let markBMI = markMass / (markHeight * markHeight);
+// let johnBMI = johnMass / (johnHeight * johnHeight);
+//
+// if (markBMI > johnBMI) {
+//     console.log("Mark's BMI is higher than John's!");
+// } else {
+//     console.log("John's BMI is higher than John's!");
+// }
 
-if (maritalStatus === "married") {
-    console.log(firstName + " is married!");
+
+// Boolean Logic
+
+let firstName = "Kerrigan";
+let age = 9;
+
+if (age < 3) {
+    console.log(firstName + " is a tiny baby!");
+} else if (age >= 4 && age<=8) {
+    console.log(firstName + " is an adult cat!");
 } else {
-    console.log(firstName + " is single!");
+    console.log(firstName + " is a Senior Baby!");
+
 }
-
-let isMarried = true;
-
-if (isMarried) {
-    console.log(firstName + " is married!");
-} else {
-    console.log(firstName + " is single!");
-}
-
-let markMass = 78 //84;
-let johnMass = 92 //88;
-
-let markHeight = 1.69 //1.82;
-let johnHeight = 1.95 //1.88;
-
-let markBMI = markMass / (markHeight * markHeight);
-let johnBMI = johnMass / (johnHeight * johnHeight);
-
-if (markBMI > johnBMI) {
-    console.log("Mark's BMI is higher than John's!");
-} else {
-    console.log("John's BMI is higher than John's!");
-}
-
 
 
 
