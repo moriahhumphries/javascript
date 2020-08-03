@@ -124,38 +124,60 @@
 
 // Ternary and Switch Statements
 
-let firstName = "Iggy";
+// let firstName = "Iggy";
 // let age = 16;
 //
 // age >= 18 ? console.log(firstName + " is " + age + " and drinks beer.") : console.log(firstName + " is " + age + " and drinks juice.")
 
-let job = "Cat";
+// let job = "Cat";
+//
+// switch (job) {
+//     case "Developer":
+//         console.log(firstName + " makes software");
+//         break;
+//     case "Cat":
+//         console.log(firstName + " stays at home and is a Cat");
+//         break;
+//     case "Dog":
+//         console.log(firstName + " would never be a Dog!");
+//         break;
+//     default:
+//         console.log(firstName + " does something else");
+// }
+//
+// let iggyAge = 4;
+// switch (true) {
+//     case iggyAge < 3:
+//         console.log(firstName + " is a tiny baby!");
+//         break;
+//     case iggyAge >= 4 && iggyAge<=8:
+//         console.log(firstName + " is an adult cat!")
+//         break;
+//     default:
+//         console.log(firstName + " is a Senior Baby!");
+// }
 
-switch (job) {
-    case "Developer":
-        console.log(firstName + " makes software");
-        break;
-    case "Cat":
-        console.log(firstName + " stays at home and is a Cat");
-        break;
-    case "Dog":
-        console.log(firstName + " would never be a Dog!");
-        break;
-    default:
-        console.log(firstName + " does something else");
+//Coding Challenge 2
+
+let johnsTeamAverage = (180 + 120 + 103) / 3;
+let mikesTeamAverage = (216 + 94 + 123) / 3;
+let marysTeamAverage = (150 + 134 + 105) / 3;
+
+console.log("John's team average: " + johnsTeamAverage);
+console.log("Mike's team average: " + mikesTeamAverage);
+console.log("Mary's team average: " + marysTeamAverage);
+
+if (mikesTeamAverage === johnsTeamAverage && johnsTeamAverage === marysTeamAverage) {
+    console.log("There was a tie!")
+} else if (mikesTeamAverage > johnsTeamAverage && marysTeamAverage < mikesTeamAverage) {
+    console.log("Mike won! Mike's team average is " + mikesTeamAverage + ", and John's team average is " + johnsTeamAverage + ", and Mary's score is " + marysTeamAverage);
+} else if (johnsTeamAverage > mikesTeamAverage && johnsTeamAverage > marysTeamAverage) {
+    console.log("John won! John's team average is " + johnsTeamAverage + ", and Mike's team average is " + mikesTeamAverage + ", and Mary's score is " + marysTeamAverage);
+} else {
+    console.log("Mary won! Mary's team average is " + marysTeamAverage + ", and John's team average is " + johnsTeamAverage + ", and Mike's team average is " + mikesTeamAverage);
 }
 
-let iggyAge = 4;
-switch (true) {
-    case iggyAge < 3:
-        console.log(firstName + " is a tiny baby!");
-        break;
-    case iggyAge >= 4 && iggyAge<=8:
-        console.log(firstName + " is an adult cat!")
-        break;
-    default:
-        console.log(firstName + " is a Senior Baby!");
-}
+
 
 
 
