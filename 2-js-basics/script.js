@@ -327,20 +327,58 @@
 
 // Objects and Methods - Only objects have Methods
 
-let moriah = {
-    firstName: "Moriah",
-    lastName: "Humphries",
-    birthYear: 1988,
-    family: ["Andrew", "Kerrigan", "Iggy"],
-    job: "Software Developer",
-    isMarried: true,
-    calcAge: function () {
-        this.age = 2020 - this.birthYear;
+// let moriah = {
+//     firstName: "Moriah",
+//     lastName: "Humphries",
+//     birthYear: 1988,
+//     family: ["Andrew", "Kerrigan", "Iggy"],
+//     job: "Software Developer",
+//     isMarried: true,
+//     calcAge: function () {
+//         this.age = 2020 - this.birthYear;
+//     }
+// };
+//
+// moriah.calcAge();
+// console.log(moriah);
+
+// Coding Challenge 4 - BMI Calculator with objects and methods
+
+let mark = {
+    firstName: "Mark",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
     }
 };
 
-moriah.calcAge();
-console.log(moriah);
+let john = {
+    firstName: "John",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function() {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
+    }
+};
+
+john.calcBMI();
+mark.calcBMI();
+
+console.log("John's BMI: " + john.BMI);
+console.log("Mark's BMI: " + mark.BMI);
+console.log(john);
+console.log(mark);
+
+if (john.BMI > mark.BMI) {
+    console.log(john.firstName + " has a higher BMI: " + john.BMI);
+} else if (mark.BMI > john.BMI) {
+    console.log(mark.firstName + " has a higher BMI: " + mark.BMI);
+} else {
+    console.log("They have the same BMI")
+}
 
 
 
