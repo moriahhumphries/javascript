@@ -236,43 +236,71 @@
 // Function Statments and Declarations - Do not produce any immediate value
 
 // Arrays
+//
+// let names = ["Moriah", "Andrew", "Kerrigan", "Iggy"]
+// let years = new Array(1988, 1984, 2011, 2015);
+//
+// console.log(names);
+// console.log(names.length);
+// console.log(years);
+// console.log(years.length);
+//
+// // Replaces Value
+// names[0] = "New Cat";
+// console.log(names);
+//
+// // Adds to End
+// names[names.length] = "End Cat";
+// console.log(names);
+//
+// // Array Methods
+//
+// // Adds to end
+// names.push("Pushed Cat");
+// console.log(names);
+//
+// // Adds to start
+// names.unshift("Unshift Cat");
+// console.log(names);
+//
+// // Removes element from end
+// names.pop();
+// console.log(names);
+//
+// // Removes element from start
+// names.shift();
+// console.log(names);
+//
+// // Returns index, or -1 if not found
+// console.log(names.indexOf("Kerrigan"));
 
-let names = ["Moriah", "Andrew", "Kerrigan", "Iggy"]
-let years = new Array(1988, 1984, 2011, 2015);
+// Coding Challenge 3 - Tip calculator
 
-console.log(names);
-console.log(names.length);
-console.log(years);
-console.log(years.length);
 
-// Replaces Value
-names[0] = "New Cat";
-console.log(names);
 
-// Adds to End
-names[names.length] = "End Cat";
-console.log(names);
+function tipCalculator(bill) {
+    let percentage;
+    if (bill <= 50) {
+        percentage = .20;
+    } else if (bill >= 50 && bill <= 200) {
+        percentage = .15;
+    } else {
+        percentage = .10;
+    }
+    return percentage * bill;
+}
 
-// Array Methods
+let bills = [124, 48, 268];
+let tips = [tipCalculator(bills[0]),
+            tipCalculator(bills[1]),
+            tipCalculator(bills[2])];
+let finalValues = [bills[0] + tips[0],
+                    bills[1] + tips[1],
+                    bills[2] + tips[2]];
 
-// Adds to end
-names.push("Pushed Cat");
-console.log(names);
+console.log(tips, finalValues)
 
-// Adds to start
-names.unshift("Unshift Cat");
-console.log(names);
 
-// Removes element from end
-names.pop();
-console.log(names);
-
-// Removes element from start
-names.shift();
-console.log(names);
-
-// Returns index, or -1 if not found
-console.log(names.indexOf("Kerrigan"));
 
 
 
