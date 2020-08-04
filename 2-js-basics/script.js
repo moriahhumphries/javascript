@@ -216,24 +216,63 @@
 // }
 
 // Function Expression - Anything that produces a result
-let yourJob = function(job, firstName) {
-    switch(job) {
-        case "teacher":
-            return firstName + " teaches kids how to code.";
-        case "developer":
-            return firstName + " develops great websites.";
-        case "designer":
-            return firstName + " designs beautiful websites";
-        default:
-            return firstName + " has a different job.";
-    }
-}
-
-console.log(yourJob("teacher", "John"));
-console.log(yourJob("developer", "Andrew"));
-console.log(yourJob("Student", "Moriah"));
+// let yourJob = function(job, firstName) {
+//     switch(job) {
+//         case "teacher":
+//             return firstName + " teaches kids how to code.";
+//         case "developer":
+//             return firstName + " develops great websites.";
+//         case "designer":
+//             return firstName + " designs beautiful websites";
+//         default:
+//             return firstName + " has a different job.";
+//     }
+// }
+//
+// console.log(yourJob("teacher", "John"));
+// console.log(yourJob("developer", "Andrew"));
+// console.log(yourJob("Student", "Moriah"));
 
 // Function Statments and Declarations - Do not produce any immediate value
+
+// Arrays
+
+let names = ["Moriah", "Andrew", "Kerrigan", "Iggy"]
+let years = new Array(1988, 1984, 2011, 2015);
+
+console.log(names);
+console.log(names.length);
+console.log(years);
+console.log(years.length);
+
+// Replaces Value
+names[0] = "New Cat";
+console.log(names);
+
+// Adds to End
+names[names.length] = "End Cat";
+console.log(names);
+
+// Array Methods
+
+// Adds to end
+names.push("Pushed Cat");
+console.log(names);
+
+// Adds to start
+names.unshift("Unshift Cat");
+console.log(names);
+
+// Removes element from end
+names.pop();
+console.log(names);
+
+// Removes element from start
+names.shift();
+console.log(names);
+
+// Returns index, or -1 if not found
+console.log(names.indexOf("Kerrigan"));
 
 
 
