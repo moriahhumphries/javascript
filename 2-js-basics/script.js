@@ -304,26 +304,42 @@
 
 // Object Literal
 
+// let moriah = {
+//     firstName: "Moriah",
+//     lastName: "Humphries",
+//     birthYear: 1988,
+//     family: ["Andrew", "Kerrigan", "Iggy"],
+//     job: "Software Developer",
+//     isMarried: true
+// };
+//
+// console.log(moriah);
+//
+// console.log(moriah.firstName);
+//
+// // New Object Syntax
+//
+// let andrew = new Object();
+//     andrew.firstName = "Andrew";
+//     andrew.lastName = "Humphries";
+// console.log(andrew);
+
+
+// Objects and Methods
+
 let moriah = {
     firstName: "Moriah",
     lastName: "Humphries",
     birthYear: 1988,
     family: ["Andrew", "Kerrigan", "Iggy"],
     job: "Software Developer",
-    isMarried: true
+    isMarried: true,
+    calcAge: function (birthYear) {
+        return 2020 - birthYear;
+    }
 };
 
-console.log(moriah);
-
-console.log(moriah.firstName);
-
-// New Object Syntax
-
-let andrew = new Object();
-    andrew.firstName = "Andrew";
-    andrew.lastName = "Humphries";
-console.log(andrew);
-
+console.log(moriah.calcAge(1988));
 
 
 
