@@ -325,7 +325,7 @@
 // console.log(andrew);
 
 
-// Objects and Methods
+// Objects and Methods - Only objects have Methods
 
 let moriah = {
     firstName: "Moriah",
@@ -334,12 +334,15 @@ let moriah = {
     family: ["Andrew", "Kerrigan", "Iggy"],
     job: "Software Developer",
     isMarried: true,
-    calcAge: function (birthYear) {
-        return 2020 - birthYear;
+    calcAge: function () {
+        this.age = 2020 - this.birthYear;
     }
 };
 
-console.log(moriah.calcAge(1988));
+moriah.calcAge();
+console.log(moriah);
+
+
 
 
 
