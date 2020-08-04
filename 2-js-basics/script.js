@@ -278,27 +278,51 @@
 
 
 
-function tipCalculator(bill) {
-    let percentage;
-    if (bill <= 50) {
-        percentage = .20;
-    } else if (bill >= 50 && bill <= 200) {
-        percentage = .15;
-    } else {
-        percentage = .10;
-    }
-    return percentage * bill;
-}
+// function tipCalculator(bill) {
+//     let percentage;
+//     if (bill <= 50) {
+//         percentage = .20;
+//     } else if (bill >= 50 && bill <= 200) {
+//         percentage = .15;
+//     } else {
+//         percentage = .10;
+//     }
+//     return percentage * bill;
+// }
+//
+// let bills = [124, 48, 268];
+// let tips = [tipCalculator(bills[0]),
+//             tipCalculator(bills[1]),
+//             tipCalculator(bills[2])];
+// let finalValues = [bills[0] + tips[0],
+//                     bills[1] + tips[1],
+//                     bills[2] + tips[2]];
+//
+// console.log(tips, finalValues)
 
-let bills = [124, 48, 268];
-let tips = [tipCalculator(bills[0]),
-            tipCalculator(bills[1]),
-            tipCalculator(bills[2])];
-let finalValues = [bills[0] + tips[0],
-                    bills[1] + tips[1],
-                    bills[2] + tips[2]];
+// Objects and Properties
 
-console.log(tips, finalValues)
+// Object Literal
+
+let moriah = {
+    firstName: "Moriah",
+    lastName: "Humphries",
+    birthYear: 1988,
+    family: ["Andrew", "Kerrigan", "Iggy"],
+    job: "Software Developer",
+    isMarried: true
+};
+
+console.log(moriah);
+
+console.log(moriah.firstName);
+
+// New Object Syntax
+
+let andrew = new Object();
+    andrew.firstName = "Andrew";
+    andrew.lastName = "Humphries";
+console.log(andrew);
 
 
 
