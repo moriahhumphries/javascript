@@ -344,42 +344,48 @@
 
 // Coding Challenge 4 - BMI Calculator with objects and methods
 
-let mark = {
-    firstName: "Mark",
-    mass: 78,
-    height: 1.69,
-    calcBMI: function() {
-        this.BMI = this.mass / (this.height * this.height);
-        return this.BMI;
-    }
-};
+// let mark = {
+//     firstName: "Mark",
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function() {
+//         this.BMI = this.mass / (this.height * this.height);
+//         return this.BMI;
+//     }
+// };
+//
+// let john = {
+//     firstName: "John",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function() {
+//         this.BMI = this.mass / (this.height * this.height);
+//         return this.BMI;
+//     }
+// };
+//
+// john.calcBMI();
+// mark.calcBMI();
+//
+// console.log("John's BMI: " + john.BMI);
+// console.log("Mark's BMI: " + mark.BMI);
+// console.log(john);
+// console.log(mark);
+//
+// if (john.BMI > mark.BMI) {
+//     console.log(john.firstName + " has a higher BMI: " + john.BMI);
+// } else if (mark.BMI > john.BMI) {
+//     console.log(mark.firstName + " has a higher BMI: " + mark.BMI);
+// } else {
+//     console.log("They have the same BMI")
+// }
+//
 
-let john = {
-    firstName: "John",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function() {
-        this.BMI = this.mass / (this.height * this.height);
-        return this.BMI;
-    }
-};
+// Loops and Iteration
 
-john.calcBMI();
-mark.calcBMI();
-
-console.log("John's BMI: " + john.BMI);
-console.log("Mark's BMI: " + mark.BMI);
-console.log(john);
-console.log(mark);
-
-if (john.BMI > mark.BMI) {
-    console.log(john.firstName + " has a higher BMI: " + john.BMI);
-} else if (mark.BMI > john.BMI) {
-    console.log(mark.firstName + " has a higher BMI: " + mark.BMI);
-} else {
-    console.log("They have the same BMI")
+for (let i = 0; i <= 9; i++){
+    console.log(i);
 }
-
 
 
 
