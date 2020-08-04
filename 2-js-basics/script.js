@@ -177,6 +177,8 @@
 //     console.log("Mary won! Mary's team average is " + marysTeamAverage + ", and John's team average is " + johnsTeamAverage + ", and Mike's team average is " + mikesTeamAverage);
 // }
 
+// Functions
+
 // function calculateAge(currentYear, birthYear) {
 //     return currentYear - birthYear;
 // }
@@ -184,20 +186,54 @@
 // let age = calculateAge(2020, 1988);
 // console.log(age);
 
-function birthCalc(birthYear) {
-    return 2020 - birthYear;
+// function birthCalc(birthYear) {
+//     return 2020 - birthYear;
+// }
+//
+// let ageMoriah = birthCalc(1988);
+// let ageAndrew = birthCalc(1984);
+//
+// function yearsUntilRetirement(birthYear) {
+//     let age = birthCalc(birthYear);
+//     let retirement = 63 - age;
+//
+//     if (retirement > 0) {
+//         console.log("Moriah retires in " + retirement + " years.")
+//     } else {
+//         console.log("This person is already retired.");
+//     }
+//
+// }
+//
+// yearsUntilRetirement(1954);
+
+// Function Statements and Expressions
+
+//Function Declaration
+
+// function yourJobDec(job, firstName) {
+//
+// }
+
+// Function Expression - Anything that produces a result
+let yourJob = function(job, firstName) {
+    switch(job) {
+        case "teacher":
+            return firstName + " teaches kids how to code.";
+        case "developer":
+            return firstName + " develops great websites.";
+        case "designer":
+            return firstName + " designs beautiful websites";
+        default:
+            return firstName + " has a different job.";
+    }
 }
 
-let ageMoriah = birthCalc(1988);
-let ageAndrew = birthCalc(1984);
+console.log(yourJob("teacher", "John"));
+console.log(yourJob("developer", "Andrew"));
+console.log(yourJob("Student", "Moriah"));
 
-function yearsUntilRetirement(birthYear) {
-    let age = birthCalc(birthYear);
-    let retirement = 63 - age;
-    console.log("Moriah retires in " + retirement + " years.")
-}
-
-yearsUntilRetirement(1984);
+// Function Statments and Declarations - Do not produce any immediate value
 
 
 
