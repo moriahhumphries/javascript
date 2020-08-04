@@ -177,13 +177,27 @@
 //     console.log("Mary won! Mary's team average is " + marysTeamAverage + ", and John's team average is " + johnsTeamAverage + ", and Mike's team average is " + mikesTeamAverage);
 // }
 
-function calculateAge(currentYear, birthYear) {
-    return currentYear - birthYear;
+// function calculateAge(currentYear, birthYear) {
+//     return currentYear - birthYear;
+// }
+//
+// let age = calculateAge(2020, 1988);
+// console.log(age);
+
+function birthCalc(birthYear) {
+    return 2020 - birthYear;
 }
 
-let age = calculateAge(2020, 1988);
-console.log(age);
+let ageMoriah = birthCalc(1988);
+let ageAndrew = birthCalc(1984);
 
+function yearsUntilRetirement(birthYear) {
+    let age = birthCalc(birthYear);
+    let retirement = 63 - age;
+    console.log("Moriah retires in " + retirement + " years.")
+}
+
+yearsUntilRetirement(1984);
 
 
 
