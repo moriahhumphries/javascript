@@ -383,11 +383,49 @@
 
 // Loops and Iteration
 
-for (let i = 0; i <= 9; i++){
-    console.log(i);
-}
+// For Loops
 
+// for (let i = 0; i <= 9; i++){
+//     console.log(i);
+// }
 
+// let names = ["Moriah", "Andrew", "Kerrigan", "Iggy"];
+// //
+// // for(let i = 0; i < names.length; i++) {
+// //     console.log(names[i]);
+// // }
+//
+// // While loop
+//
+// let i = 0;
+// while(i < names.length) {
+//     console.log(names[i]);
+//     i++;
+// }
+
+// Continue and Break Statements
+
+let array = ["Moriah", 1988, true, "Andrew"];
+//
+// for(let i = 0; i < array.length; i++) {
+//     if (typeof array[i] !== "string") {
+//         continue;
+//     }
+//     console.log(array[i]);
+// }
+//
+// for(let i = 0; i < array.length; i++) {
+//     if (typeof array[i] !== "string") {
+//         break;
+//     }
+//     console.log(array[i]);
+// }
+
+// Looping backwards
+
+// for(let i = array.length -1; i >= 0; i--) {
+//     console.log(array[i]);
+// }
 
 
 
