@@ -430,6 +430,7 @@ let array = ["Moriah", 1988, true, "Andrew"];
 // Coding Challenge 5 - Tip Calculator V2
 
 let john = {
+    firstName: "John",
     bills: [124, 48, 268, 180, 42],
     calcTips: function() {
         this.tips = [];
@@ -439,7 +440,7 @@ let john = {
             let percentage;
             let bill = this.bills[i]
 
-            if (bill <= 50) {
+            if (bill < 50) {
                 percentage = .20;
             } else if (bill >= 50 && bill <= 200) {
                 percentage = .15;
@@ -453,9 +454,55 @@ let john = {
     }
 }
 
-john.calcTips();
-console.log(john);
+let mark = {
+    firstName: "Mark",
+    bills: [77, 475, 110, 45],
+    calcTips: function() {
+        this.tips = [];
+        this.finalBills =[]
 
+        for(let i = 0; i < this.bills.length; i++) {
+            let percentage;
+            let bill = this.bills[i]
+
+            if (bill < 100) {
+                percentage = .20;
+            } else if (bill >= 100 && bill <= 300) {
+                percentage = .10;
+            } else {
+                percentage = .25;
+            }
+
+            this.tips[i] = bill * percentage;
+            this.finalBills[i] = bill + (bill * percentage);
+        }
+    }
+}
+
+function averageTip(tips) {
+    let sum = 0;
+    for(let i = 0; i < tips.length; i++) {
+        sum = sum + tips[i]
+    }
+    return sum / tips.length;
+}
+
+john.calcTips();
+mark.calcTips();
+
+john.average = averageTip(john.tips);
+mark.average = averageTip(mark.tips);
+
+console.log(john);
+console.log(mark);
+
+if (john.average > mark.average) {
+    console.log(john.firstName + " has a higher tip average.")
+} else if (mark.average > john.average) {
+    console.log(mark.firstName + " has a higher tip average.")
+} else {
+    console.log("They have the same tip average!")
+}
 
 
 
