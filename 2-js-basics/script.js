@@ -427,6 +427,39 @@ let array = ["Moriah", 1988, true, "Andrew"];
 //     console.log(array[i]);
 // }
 
+// Coding Challenge 5 - Tip Calculator V2
+
+let john = {
+    bills: [124, 48, 268, 180, 42],
+    calcTips: function() {
+        this.tips = [];
+        this.finalBills =[]
+
+        for(let i = 0; i < this.bills.length; i++) {
+            let percentage;
+            let bill = this.bills[i]
+
+            if (bill <= 50) {
+                percentage = .20;
+            } else if (bill >= 50 && bill <= 200) {
+                percentage = .15;
+            } else {
+                percentage = .10;
+            }
+
+            this.tips[i] = bill * percentage;
+            this.finalBills[i] = bill + (bill * percentage);
+        }
+    }
+}
+
+john.calcTips();
+console.log(john);
+
+
+
+
+
 
 
 
