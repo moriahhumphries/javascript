@@ -9,22 +9,34 @@ GAME RULES:
 
 */
 console.log('test');
-let scores, roundScore, activePlayer, dice;
+let scores, roundScore, activePlayer;
 
-scores = [0,0];
+scores = [0, 0];
 roundScore = 0;
 activePlayer = 0;
 
-console.log(dice);
 
-document.querySelector("#current-"  + activePlayer).textContent = dice;
+// document.querySelector("#current-"  + activePlayer).textContent = dice;
 // document.querySelector("#current-" + activePlayer).innerHTML = "<em>" + dice + "</em>"
-
 
 document.querySelector(".dice").style.display = "none";
 
-document.querySelector("btn-roll").addEventListener("click", function (){
-    dice = Math.floor(Math.random() * 6) + 1;
+document.getElementById("score-0").textContent = "0"
+document.getElementById("score-1").textContent = "0"
+document.getElementById("current-0").textContent = "0"
+document.getElementById("current-1").textContent = "0"
+
+document.querySelector(".btn-roll").addEventListener("click", function () {
+
+    // Random Number
+    let dice = Math.floor(Math.random() * 6) + 1;
+
+    // Display Result
+    let diceDOM = document.querySelector(".dice");
+    dice.style.display = "block";
+    diceDOM.src = "dice-" + dice + ".png";
+
+    // Update round score, unless number 1
 
 });
 
