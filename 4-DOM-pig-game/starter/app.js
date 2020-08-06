@@ -27,17 +27,38 @@ document.getElementById("current-0").textContent = "0"
 document.getElementById("current-1").textContent = "0"
 
 document.querySelector(".btn-roll").addEventListener("click", function () {
-
     // Random Number
     let dice = Math.floor(Math.random() * 6) + 1;
-
     // Display Result
     let diceDOM = document.querySelector(".dice");
-    dice.style.display = "block";
+    diceDOM.style.display = "block";
     diceDOM.src = "dice-" + dice + ".png";
+    // Update round score, unless number is 1
+    if (dice !== 1) {
+        // Add score to total
+        roundScore += dice;
+        document.querySelector("#current-" + activePlayer).textContent = roundScore;
+    } else {
+        // Switch players with a 1
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        roundScore = 0;
 
-    // Update round score, unless number 1
+        document.getElementById("current-0").textContent = "0";
+        document.getElementById("current-1").textContent = "0";
 
+        // Use toggle for efficiency
+        //document.querySelector(".player-0-panel").classList.remove("active");
+        //document.querySelector(".player-1-panel").classList.add("active");
+
+        document.querySelector(".player-0-panel").classList.toggle("active");
+        document.querySelector(".player-1-panel").classList.toggle("active");
+
+        document.querySelector(".dice").style.display = "none";
+
+
+
+
+    }
 });
 
 
