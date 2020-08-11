@@ -49,6 +49,17 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
         scores[activePlayer] += roundScore;
         // update user interface
         document.querySelector("#score-" + activePlayer).textContent = scores[activePlayer];
+        // User input for points required to win game
+        let input = document.querySelector('.points-to-win').value;
+        let winningScore;
+        // Type coercion to false if - undef, null, 0, ""
+        if(input) {
+            let winningScore = input;
+        } else {
+            winningScore = 100;
+        }
+
+
         // check if player has won
         if (scores[activePlayer] >= 10) {
             document.querySelector("#name-" + activePlayer).textContent = "Winner!";
