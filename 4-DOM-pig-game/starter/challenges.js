@@ -1,18 +1,18 @@
 /*
-GAME RULES:
+YOUR 3 CHALLENGES
+Change the game to follow these rules:
 
-- The game has 2 players, playing in rounds
-- In each turn, a player rolls a dice as many times as they wish. Each result get added to their ROUND score
-- BUT, if the player rolls a 1, all their ROUND score gets lost. After that, it's the next player's turn
-- The player can choose to 'Hold', which means that their ROUND score gets added to their GLOBAL score. After that, it's the next player's turn
-- The first player to reach 20 points on GLOBAL score wins the game
-
+1. A player looses his ENTIRE score when he rolls two 6 in a row. After that, it's the next player's turn. (Hint: Always save the previous dice roll in a separate variable)
+2. Add an input field to the HTML where players can set the winning score, so that they can change the predefined score of 100. (Hint: you can read that value with the .value property in JavaScript. This is a good oportunity to use google to figure this out :)
+3. Add another dice to the game, so that there are two dices now. The player looses his current score when one of them is a 1. (Hint: you will need CSS to position the second dice, so take a look at the CSS code for the first one.)
 */
 console.log('test');
 let scores, roundScore, activePlayer, gamePlaying;
 // gamePlaying = true;
 
 init();
+
+let lastDice;
 
 // document.querySelector("#current-"  + activePlayer).textContent = dice;
 // document.querySelector("#current-" + activePlayer).innerHTML = "<em>" + dice + "</em>"
@@ -26,13 +26,20 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
         diceDOM.style.display = "block";
         diceDOM.src = "dice-" + dice + ".png";
         // Update round score, unless number is 1
-        if (dice !== 1) {
+        if (dice === 6 && lastDice === 6) {
+            // Player loses score if rolling 6 twice in a row
+            scores[activePlayer] = 0;
+            document.querySelector("#score-" + activePlayer).textContent = '0';
+            nextPlayer();
+        } else if (dice !== 1) {
             // Add score to total
             roundScore += dice;
             document.querySelector("#current-" + activePlayer).textContent = roundScore;
         } else {
             nextPlayer();
         }
+
+        lastDice = dice;
     }
 });
 
@@ -98,9 +105,3 @@ function init() {
 // Reset Active Player
     document.querySelector(".player-0-panel").classList.add("active");
 }
-
-
-
-
-
-
