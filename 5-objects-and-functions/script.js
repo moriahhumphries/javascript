@@ -95,6 +95,45 @@ change(age, obj);
 console.log(age);
 console.log(obj.city);
 
+// Passing Functions as Arguments
+
+let years = [1998, 1988, 2005, 1984, 1972];
+
+function arrayCalc(arr, fn) {
+    let arrRes = [];
+    for(let i = 0; i < arr.length; i++) {
+        arrRes.push(fn(arr[i])); // inserts element at end of array
+    }
+    return arrRes;
+}
+
+// Callback functions, functions passed into functions
+
+function calculateAge(ele) {
+    return 2020 - ele;
+}
+
+function fullAge(ele) {
+    return ele >= 18;
+}
+
+function maxHeartRate(ele) {
+    if(ele >= 18 && ele <= 81) {
+        return Math.round(206.9 - (0.67 * ele));
+    }
+    return -1;
+}
+
+let ages = arrayCalc(years, calculateAge); // not calling function, passing in
+let fullAges = arrayCalc(ages, fullAge); // uses array, passes in function
+let rates = arrayCalc(ages, maxHeartRate);
+
+console.log(ages);
+console.log(fullAges);
+console.log(rates);
+
+
+
 
 
 
