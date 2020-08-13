@@ -38,22 +38,63 @@
 
 // Object.create method
 
-let personProto = {
-    calculateAge: function () {
-        console.log(2020 - this.yearOfBirth);
-    }
+// let personProto = {
+//     calculateAge: function () {
+//         console.log(2020 - this.yearOfBirth);
+//     }
+// };
+//
+// let sandra = Object.create(personProto);
+// sandra.name = "Sandra";
+// sandra.yearOfBirth = 1990;
+// sandra.job = "teacher";
+//
+// let kara = Object.create(personProto, {
+//     name: { value: "Jane" },
+//     yearOfBirth: { value: 1986 },
+//     job: { value: "designer" }
+// });
+
+// Primitives vs objects
+
+// Primitives
+let a = 23;
+let b = a;
+a = 46;
+
+console.log(a);
+console.log(b);
+
+let obj1 = {
+    name: "John",
+    age: 26
 };
 
-let sandra = Object.create(personProto);
-sandra.name = "Sandra";
-sandra.yearOfBirth = 1990;
-sandra.job = "teacher";
+// points to obj1
+let obj2 = obj1;
+obj1.age = 30;
 
-let kara = Object.create(personProto, {
-    name: { value: "Jane" },
-    yearOfBirth: { value: 1986 },
-    job: { value: "designer" }
-});
+console.log(obj1.age);
+console.log(obj2.age);
+
+// Functions
+
+let age = 32;
+let obj = {
+    name: "Moriah",
+    city: "Dallas"
+};
+
+function change(a, b){
+    a = 30; // primitive
+    b.city = "San Francisco"; // Changes city, object passed
+}
+
+change(age, obj);
+
+console.log(age);
+console.log(obj.city);
+
 
 
 
