@@ -135,32 +135,54 @@
 
 // Functions returning functions
 
-function interviewQuestion(job){
-    if(job === "designer"){
-        return function (name) { // anonymous function
-            console.log(name + ", can you explain what UX design is?")
-        }
-    } else if (job === "teacher") {
-        return function (name) {
-            console.log("What subject do you teach, " + name + "?")
-        }
-    } else {
-        return function (name) {
-            console.log("Hello, " + name + " what do you do?")
-        }
-    }
-}
+// function interviewQuestion(job){
+//     if(job === "designer"){
+//         return function (name) { // anonymous function
+//             console.log(name + ", can you explain what UX design is?")
+//         }
+//     } else if (job === "teacher") {
+//         return function (name) {
+//             console.log("What subject do you teach, " + name + "?")
+//         }
+//     } else {
+//         return function (name) {
+//             console.log("Hello, " + name + " what do you do?")
+//         }
+//     }
+// }
+//
+// // functions are objects
+// let teacherQuestion = interviewQuestion("teacher"); // "teacher" anon function
+// let designerQuestion = interviewQuestion("designer"); // "designer anon function
+//
+// teacherQuestion("John");
+// designerQuestion("John");
+// teacherQuestion("Jane");
+// designerQuestion("Sandra");
+//
+// interviewQuestion("teacher")("Mark"); // evaluates from left to right
 
-// functions are objects
-let teacherQuestion = interviewQuestion("teacher"); // "teacher" anon function
-let designerQuestion = interviewQuestion("designer"); // "designer anon function
+// IIFE
 
-teacherQuestion("John");
-designerQuestion("John");
-teacherQuestion("Jane");
-designerQuestion("Sandra");
+// function game() {
+//     let score = Math.random() * 10;
+//     console.log(score >= 5);
+// }
 
-interviewQuestion("teacher")("Mark"); // evaluates from left to right
+// game();
+
+(function (){
+    let score = Math.random() * 10;
+    console.log(score >= 5);
+})();
+
+// console.log(scores);
+
+(function (goodLuck){
+    let score = Math.random() * 10;
+    console.log(score >= 5 - goodLuck);
+})(5);
+
 
 
 
