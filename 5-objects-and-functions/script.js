@@ -171,18 +171,53 @@
 
 // game();
 
-(function (){
-    let score = Math.random() * 10;
-    console.log(score >= 5);
-})();
+// (function (){
+//     let score = Math.random() * 10;
+//     console.log(score >= 5);
+// })();
+//
+// // console.log(scores);
+//
+// (function (goodLuck){
+//     let score = Math.random() * 10;
+//     console.log(score >= 5 - goodLuck);
+// })(5);
 
-// console.log(scores);
+// Closures - inner function has access to variables and functions of outer functions. Even after a function returns, the variable object is still accessible.
 
-(function (goodLuck){
-    let score = Math.random() * 10;
-    console.log(score >= 5 - goodLuck);
-})(5);
+function retirement(retirementAge) {
+    let a = " years left until retirement.";
+    return function (yearOfBirth) {
+        let age = 2020 - yearOfBirth;
+        console.log((retirementAge - age) + a);
+    }
+}
 
+let retirementUS = retirement(66);
+retirementUS(1990);
+let retirementGermany = retirement(65);
+retirementGermany(1990);
+let retirementIceland = retirement(67);
+retirementIceland(1990);
+
+// retirement(66)(1990);
+
+// function interviewQuestion(job){
+//     if(job === "designer"){
+//         return function (name) { // anonymous function
+//             console.log(name + ", can you explain what UX design is?")
+//         }
+//     } else if (job === "teacher") {
+//         return function (name) {
+//             console.log("What subject do you teach, " + name + "?")
+//         }
+//     } else {
+//         return function (name) {
+//             console.log("Hello, " + name + " what do you do?")
+//         }
+//     }
+// }
+//
 
 
 
