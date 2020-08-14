@@ -219,22 +219,86 @@
 // }
 
 
-function interviewQuestion(job) {
-    return function (name) {
-        if (job === "designer") {
-            console.log(name + ", can you explain what UX design is?")
-        } else if (job === "teacher") {
-            console.log("What subject do you teach, " + name + "?")
-        } else {
-            console.log("Hello, " + name + " what do you do?")
+// function interviewQuestion(job) {
+//     return function (name) {
+//         if (job === "designer") {
+//             console.log(name + ", can you explain what UX design is?")
+//         } else if (job === "teacher") {
+//             console.log("What subject do you teach, " + name + "?")
+//         } else {
+//             console.log("Hello, " + name + " what do you do?")
+//         }
+//     }
+// }
+//
+// interviewQuestion("teacher")("John");
+
+// Bind, Call, Apply methods
+
+let john = {
+    name: "John",
+    age: 26,
+    job: "teacher",
+    presentation: function (style, timeOfDay) {
+        if (style === "formal") {
+            console.log("Good " + timeOfDay + ", ladies and gentleman. I'm " + this.name + " and I am a " + this.job + " and I am " + this.age + " years old.");
+        } else if (style === "friendly") {
+            console.log("Hey, what's up? I'm " + this.name + ", have a cool " + timeOfDay + ".")
+
         }
     }
 }
 
-interviewQuestion("teacher")("John");
+let emily = {
+    name: "Emily",
+    age: 35,
+    job: "designer"
+};
 
+john.presentation("formal", "morning");
 
+// Call method
+john.presentation.call(emily, "friendly", "afternoon");
 
+// Apply
+// john.presentation.apply(emily ["friendly", "evening"]);
+
+// Bind - returns a function
+
+let johnFriendly = john.presentation.bind(john, "friendly"); // presets the argument
+
+johnFriendly("morning");
+
+let emilyFormal = john.presentation.bind(emily, "formal")
+
+emilyFormal("evening");
+
+let years = [1998, 1988, 2005, 1984, 1972];
+
+function arrayCalc(arr, fn) {
+    let arrRes = [];
+    for(let i = 0; i < arr.length; i++) {
+        arrRes.push(fn(arr[i])); // inserts element at end of array
+    }
+    return arrRes;
+}
+
+// Callback functions, functions passed into functions
+
+function calculateAge(ele) {
+    return 2020 - ele;
+}
+
+function fullAge(limit, ele) {
+    return ele >= limit;
+}
+
+let ages = arrayCalc(years, calculateAge);
+
+let fullJapan = arrayCalc(ages, fullAge.bind(this, 20));
+
+console.log(ages);
+console.log(fullJapan)
 
 
 
